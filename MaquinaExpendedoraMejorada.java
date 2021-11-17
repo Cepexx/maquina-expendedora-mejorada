@@ -54,8 +54,8 @@ public class MaquinaExpendedoraMejorada {
      * Imprime un billete para el cliente actual
      */
     public void imprimirBillete() {
-        int cantidadDeDineroQueFalta = balanceClienteActual - precioBillete;
-        if (cantidadDeDineroQueFalta >= 0) {        
+        int cantidadDeDineroQueFalta = precioBillete - balanceClienteActual;
+        if (cantidadDeDineroQueFalta <= 0) {        
             // Simula la impresion de un billete
             System.out.println("##################");
             System.out.println("# Billete de tren:");
