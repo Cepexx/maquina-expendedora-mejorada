@@ -90,12 +90,14 @@ public class MaquinaExpendedoraMejorada {
      * Retira todo el dinero de la máquina
      */
     public int retirarDinero() {
-        int dineroRetirado = totalDineroAcumulado;
-        if (balanceClienteActual != 0) {    
-            totalDineroAcumulado= 0;            
-        } else {
+        int dineroRetirado = 0;
+        if (balanceClienteActual != 0) {
             dineroRetirado = -1;
             System.out.println ("No se puede retirar el dinero, hay una operación en curso");
+           
+        } else {
+            dineroRetirado = totalDineroAcumulado;
+            totalDineroAcumulado = 0;
         }
         return dineroRetirado;
     }
