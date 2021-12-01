@@ -76,7 +76,7 @@ public class MaquinaExpendedoraMejorada {
                 System.out.println("# De " + estacionOrigen + " a " + estacionDestino);
                 System.out.println("# " + precioBillete + " euros.");
                 System.out.println("##################");
-                if (maquinaPremiada = true) {
+                if (maquinaPremiada == true && billetesVendidos % 3 == 0) {
                     System.out.println("Descuento de " + (precioBillete * 10) /100 + "€ para compras en comercios asociados");
                 }
         
